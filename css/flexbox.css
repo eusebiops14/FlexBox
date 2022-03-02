@@ -7,3 +7,34 @@
 .cabecalhoPrincipal-nav {
     display: flex;
 }
+
+.rodapePrincipal-patrocinadores .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rodapePrincipal-patrocinadores-list{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 70%;
+    margin-right: 5%;
+}
+
+.rodapePrincipal-contatoForm{
+    width:25%;
+}
+
+
+.rodapePrincipal-contatoForm-fieldset {
+    display: flex;
+}
+
+.rodapePrincipal-navMap-list {
+    display: flex;
+    flex-direction: column; /* padrão é rown */
+    flex-wrap: wrap; /* Quando usado com o flex direction column, esse wrap faz com que o conteudo da tag seja quebrado
+                        em mais de uma coluna de modo que a altura da tag pai não seja ultrapassada */
+    /*flex-flow: column wrap */
+    height: 260px;
+}
