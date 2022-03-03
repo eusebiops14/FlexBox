@@ -15,10 +15,13 @@
 
 .rodapePrincipal-patrocinadores-list{
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    align-items: center; /*altera sempre o CROSS AXIS */
+    justify-content: space-around;  /* altera sempre o MAIN AXIS*/
     width: 70%;
     margin-right: 5%;
+    /* LEMBRE-SE: quando usamos o flex-direction:column, invertemos os axis. O main axes passa a estar na vertical
+    enquanto o cross axis fica na horizontal.
+     */
 }
 
 .rodapePrincipal-contatoForm{
@@ -32,9 +35,40 @@
 
 .rodapePrincipal-navMap-list {
     display: flex;
-    flex-direction: column; /* padrão é rown */
+    flex-direction: column; /* padrão é row */
     flex-wrap: wrap; /* Quando usado com o flex direction column, esse wrap faz com que o conteudo da tag seja quebrado
                         em mais de uma coluna de modo que a altura da tag pai não seja ultrapassada */
     /*flex-flow: column wrap */
     height: 260px;
+}
+
+.conteudoPrincipal-cursos {
+    display: flex;
+    flex-wrap: wrap;
+   /* justify-content: space-between;*/
+    /*justify-content: flex-start OU flex-end */
+}
+
+.conteudoPrincipal-cursos-link {
+    width: 23%;
+    margin: 1%;
+}
+
+.conteudoPrincipal-cursos-link:nth-child(4n) {
+    margin-right: 0;
+}
+
+.conteudoPrincipal-cursos-link:nth-child(4n+1) {
+    margin-left: 0;
+}
+
+/* parte mobile*/
+.cabecalhoPrincipal-nav {
+    flex-direction: column;
+}
+
+.cabecalhoPrincipal .container {
+    flex-direction: column;
+    align-items: initial;
+    text-align: center;
 }
